@@ -8,25 +8,6 @@ const App = () => {
 	const handleClick = (e: any) => {
 		const value = e.target.value;
 		setInput((prevState) => prevState + value);
-		if (value === '+' || value === '-' || value === '*' || value === '/') {
-			setOperator(value);
-		}
-		if (value === '=') {
-			const firstNumber = input.split(operator)[0],
-				secondNumber = input.split(operator)[1];
-			if (operator === '+') {
-				setOutput(Number(firstNumber) + Number(secondNumber));
-			}
-			if (operator === '-') {
-				setOutput(Number(firstNumber) - Number(secondNumber));
-			}
-			if (operator === '*') {
-				setOutput(Number(firstNumber) * Number(secondNumber));
-			}
-			if (operator === '/') {
-				setOutput(Number(firstNumber) / Number(secondNumber));
-			}
-		}
 	};
 
 	return (
